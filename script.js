@@ -1,4 +1,4 @@
-// WallUPI site — nav, mobile menu, scroll-reveal, screenshot gallery
+// WallUPI site — nav, mobile menu, scroll-reveal
 
 (function () {
   'use strict';
@@ -41,18 +41,4 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
-
-  // ── screenshot gallery tabs ──────────────────────────
-  var tabs = document.querySelectorAll('.gtab');
-  var slides = document.querySelectorAll('.gslide');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-target');
-      tabs.forEach(function (t) { t.classList.remove('active'); });
-      slides.forEach(function (s) { s.classList.remove('active'); });
-      tab.classList.add('active');
-      var el = document.getElementById(target);
-      if (el) el.classList.add('active');
-    });
-  });
 })();
