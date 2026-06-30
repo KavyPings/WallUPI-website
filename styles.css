@@ -1,11 +1,11 @@
 /* ═══════════════════════════════════════════════════════════
-   WallUPI — product site
+   WallUPI product site
    One consistent light surface · dark only where it belongs
    (the phone screenshots and the privacy card)
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  /* brand — single blue accent, taken from the logo */
+  /* brand: single blue accent, taken from the logo */
   --blue:       #2d6fe0;
   --blue-dark:  #2160cf;
   --blue-soft:  #eaf1fd;
@@ -17,7 +17,7 @@
   --l-line:   #e2e6ee;
   --l-line-2: #d4dae4;
 
-  /* dark surfaces — only phone frames, the privacy card, the footer */
+  /* dark surfaces: only phone frames, the privacy card, the footer */
   --d-base:   #15171a;
   --d-deep:   #101113;
   --d-card:   #1d1f22;
@@ -156,7 +156,7 @@ a { color: inherit; text-decoration: none; }
 
 .upi-chip { font-weight: 800; font-size: .68em; letter-spacing: .02em; color: var(--blue); }
 
-/* phone frame (intentionally dark — it's the app) */
+/* phone frame (intentionally dark, it's the app) */
 .phone {
   border-radius: 30px; background: #0a0b0d; padding: 8px;
   border: 1px solid #2a2c31;
@@ -383,3 +383,30 @@ a { color: inherit; text-decoration: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .btn:hover, .check-card:hover { transform: none; }
 }
+
+/* ── Standalone pages (download / coming soon) ───────── */
+.subpage { min-height: 100vh; display: flex; flex-direction: column; }
+.subnav {
+  width: 100%; max-width: var(--maxw); margin: 0 auto;
+  padding: 1.2rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.sublink { font-weight: 600; font-size: .92rem; color: var(--ink-soft); transition: color .15s; }
+.sublink:hover { color: var(--ink); }
+.subpage-main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem 1.5rem 5rem; }
+.subpage-card { width: 100%; max-width: 560px; text-align: center; }
+.subpage-card .pill {
+  display: inline-block; font-weight: 700; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--blue); background: var(--blue-soft); border: 1px solid #d6e4fb;
+  padding: .35rem .8rem; border-radius: 999px; margin-bottom: 1.4rem;
+}
+.subpage-card h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.03em; line-height: 1.08; margin: 0 0 1rem; }
+.subpage-card .lead { color: var(--ink-soft); font-size: 1.12rem; margin: 0 auto 2rem; max-width: 460px; }
+.subpage-actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+.apk-meta { margin-top: 1rem; font-size: .88rem; color: var(--ink-mute); }
+.download-steps {
+  text-align: left; max-width: 440px; margin: 3rem auto 0;
+  background: var(--l-card); border: 1px solid var(--l-line); border-radius: var(--radius); padding: 1.6rem 1.8rem;
+}
+.download-steps h2 { margin: 0 0 1rem; font-size: 1.05rem; letter-spacing: -.01em; }
+.download-steps ol { margin: 0; padding-left: 1.2rem; color: var(--ink-soft); font-size: .96rem; display: flex; flex-direction: column; gap: .6rem; }
+.download-note { margin: 2rem auto 0; max-width: 460px; font-size: .85rem; color: var(--ink-mute); }

@@ -1,4 +1,4 @@
-// WallUPI site — nav, mobile menu, scroll-reveal
+// WallUPI site: nav, mobile menu, scroll-reveal
 
 (function () {
   'use strict';
