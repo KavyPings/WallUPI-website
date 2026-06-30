@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WallUPI — Catch the scam before you tap send</title>
+  <meta name="description" content="WallUPI is an AI safety layer for UPI payments that spots fraud in real time — and slows you down before the money's gone. A Wall product." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ░░░ SVG defs: logo gradients (defined once, reused) ░░░ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1C1D1F" />
+        <stop offset="48%" stop-color="#1C1D1F" />
+        <stop offset="62%" stop-color="#1E9BF0" />
+        <stop offset="100%" stop-color="#2BB89E" />
+      </linearGradient>
+      <linearGradient id="upiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#1E9BF0" />
+        <stop offset="100%" stop-color="#2BB89E" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ░░░ NAV ░░░ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="WallUPI home">
+        <svg class="brand-mark" viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+          <path d="M5 7 L13 33 L20 16 L27 33 L35 7" fill="none" stroke="url(#wallGrad)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">Wall<span class="brand-upi">UPI</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#checks">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#safety">Safety</a>
+        <a href="#screens">Screens</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#get" class="btn btn-primary btn-sm">Get the app</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ░░░ HERO ░░░ -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-dots" aria-hidden="true"></div>
+
+        <!-- floating decorative elements -->
+        <div class="float float-note reveal" aria-hidden="true">
+          <span class="float-pin"></span>
+          A brand-new payee + a panic SMS + an active call. Most apps let it through. WallUPI doesn't.
+        </div>
+
+        <div class="float float-phone reveal" aria-hidden="true">
+          <div class="phone phone-sm">
+            <img src="assets/screen-home.jpeg" alt="" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="float float-alert reveal" aria-hidden="true">
+          <div class="alert-ico">⚠</div>
+          <div>
+            <strong>Suspicious SMS detected</strong>
+            <span>Linked to this recipient · Risk: High</span>
+          </div>
+        </div>
+
+        <div class="float float-safe reveal" aria-hidden="true">
+          <span class="dot-green"></span> Safe payment · cleared
+        </div>
+
+        <div class="float float-badge reveal" aria-hidden="true">
+          <div class="badge-num">3-tier</div>
+          <div class="badge-sub">AI defense <span class="upi-chip">UPI</span></div>
+        </div>
+
+        <div class="float float-meter reveal" aria-hidden="true">
+          <div class="meter-ring meter-high">100%</div>
+          <span>Risk paused</span>
+        </div>
+
+        <!-- hero copy -->
+        <div class="hero-copy">
+          <div class="hero-eyebrow">AI fraud protection for UPI · A Wall product</div>
+          <h1 class="hero-title">
+            Catch the scam<br />
+            <span class="muted">before you tap send</span>
+          </h1>
+          <p class="hero-sub">
+            WallUPI is a payment app with one extra superpower — it runs a real-time
+            risk check on every transaction and steps in <em>before</em> the money's gone.
+          </p>
+          <div class="hero-cta">
+            <a href="#get" class="btn btn-primary btn-lg">Get the app</a>
+            <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+          </div>
+          <div class="hero-foot">Spots scams in real time · Works on-device · No real money moves</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ STATS STRIP ░░░ -->
+    <section class="stats">
+      <p class="stats-lead">Built to do one thing brilliantly — <strong>stop you from paying a scammer.</strong></p>
+      <div class="stats-grid">
+        <div class="stat reveal"><div class="stat-num">3-tier</div><div class="stat-label">AI working together on every payment</div></div>
+        <div class="stat reveal"><div class="stat-num">On-device</div><div class="stat-label">Your messages are read on your phone</div></div>
+        <div class="stat reveal"><div class="stat-num">Real time</div><div class="stat-label">Checks run the moment you hit pay</div></div>
+        <div class="stat reveal"><div class="stat-num">Community</div><div class="stat-label">Flagged UPI IDs warn everyone</div></div>
+      </div>
+    </section>
+
+    <!-- ░░░ PROBLEM ░░░ -->
+    <section class="problem">
+      <div class="problem-inner">
+        <div class="section-eyebrow">The problem</div>
+        <h2 class="section-title light">Scams don't win because people are careless.<br /><span class="muted">They win because they're fast.</span></h2>
+        <div class="problem-flow">
+          <div class="flow-step reveal"><span class="flow-n">1</span><p>A panic SMS arrives — "your account is blocked."</p></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step reveal"><span class="flow-n">2</span><p>A "bank officer" calls and stays on the line.</p></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step reveal"><span class="flow-n">3</span><p>You're rushed into sending money to "fix" it.</p></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step reveal danger"><span class="flow-n">4</span><p>The moment you confirm, it's gone.</p></div>
+        </div>
+        <p class="problem-note">WallUPI is the voice in your corner — pointing out the warning signs before you tap send.</p>
+      </div>
+    </section>
+
+    <!-- ░░░ THE 5 CHECKS (dark) ░░░ -->
+    <section class="checks" id="checks">
+      <div class="section-head center">
+        <div class="section-eyebrow accent">Every payment, screened</div>
+        <h2 class="section-title">Five signals, weighed in an instant</h2>
+        <p class="section-desc">The moment you hit pay, WallUPI quietly reads the situation — not just the amount.</p>
+      </div>
+      <div class="checks-grid">
+        <article class="check-card reveal">
+          <div class="check-ico ico-blue">👤</div>
+          <h3>Who you're paying</h3>
+          <p>Is this someone you've paid before, or a brand-new payee? Has the community flagged this UPI ID?</p>
+        </article>
+        <article class="check-card reveal">
+          <div class="check-ico ico-teal">₹</div>
+          <h3>Is the amount normal</h3>
+          <p>A sudden, out-of-character transfer to a new contact stands out — even when everything else looks fine.</p>
+        </article>
+        <article class="check-card reveal">
+          <div class="check-ico ico-red">📞</div>
+          <h3>Are you on a call</h3>
+          <p>Scammers keep you talking so you can't think. An active call during payment raises the alarm.</p>
+        </article>
+        <article class="check-card reveal">
+          <div class="check-ico ico-amber">✉</div>
+          <h3>A suspicious SMS</h3>
+          <p>If a scam-like message recently mentioned this recipient, WallUPI treats it as a serious warning.</p>
+        </article>
+        <article class="check-card reveal">
+          <div class="check-ico ico-violet">⛶</div>
+          <h3>How you got here</h3>
+          <p>Did you scan a QR or follow a link? Those entry points carry more risk than typing an ID yourself.</p>
+        </article>
+        <article class="check-card reveal accent-card">
+          <div class="check-ico ico-glow">✦</div>
+          <h3>One clear verdict</h3>
+          <p>All the signals come together into a single, easy-to-read risk read-out — so the decision is yours, informed.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░░ HOW IT WORKS — 3 TIERS (dark) ░░░ -->
+    <section class="how" id="how">
+      <div class="section-head center">
+        <div class="section-eyebrow accent">Under the hood</div>
+        <h2 class="section-title">Three layers of AI, working together</h2>
+        <p class="section-desc">They run side by side on every message and payment — fast, private, and always on.</p>
+      </div>
+      <div class="tiers">
+        <article class="tier reveal">
+          <div class="tier-rail"><span class="tier-num">1</span></div>
+          <div class="tier-body">
+            <span class="tier-tag">On-device · always on</span>
+            <h3>Instant rule engine</h3>
+            <p>A lightning-fast first pass that runs entirely on your phone, with no internet needed. It catches the obvious red flags the instant they appear.</p>
+          </div>
+        </article>
+        <article class="tier reveal">
+          <div class="tier-rail"><span class="tier-num">2</span></div>
+          <div class="tier-body">
+            <span class="tier-tag">On-device ML · private</span>
+            <h3>TinyBERT on your phone</h3>
+            <p>A compact language model reads messages locally and sorts them into scam categories — phishing, fake KYC, OTP theft and more. Fast, offline, and your data never leaves the device.</p>
+          </div>
+        </article>
+        <article class="tier reveal">
+          <div class="tier-rail"><span class="tier-num">3</span></div>
+          <div class="tier-body">
+            <span class="tier-tag">Cloud second opinion</span>
+            <h3>A larger model, when it counts</h3>
+            <p>When something looks borderline, a sanitized, anonymous snippet is sent to a powerful cloud model for a closer look — returning a plain-English explanation of what it found and why.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░░ RISK LEVELS (dark) ░░░ -->
+    <section class="levels">
+      <div class="section-head center">
+        <div class="section-eyebrow accent">What you'll see</div>
+        <h2 class="section-title">Four levels of intervention</h2>
+        <p class="section-desc">The riskier it looks, the harder WallUPI works to make you pause.</p>
+      </div>
+      <div class="levels-grid">
+        <article class="level reveal lv-safe">
+          <div class="level-top"><span class="level-dot"></span><span class="level-name">Safe</span></div>
+          <p>Looks normal. Your payment goes straight through — no friction.</p>
+        </article>
+        <article class="level reveal lv-soft">
+          <div class="level-top"><span class="level-dot"></span><span class="level-name">Soft warning</span></div>
+          <p>Something's a little off. A quick review card spells out the specific reasons.</p>
+        </article>
+        <article class="level reveal lv-strong">
+          <div class="level-top"><span class="level-dot"></span><span class="level-name">Strong warning</span></div>
+          <p>Several red flags at once. A full warning screen — you confirm you understand before proceeding.</p>
+        </article>
+        <article class="level reveal lv-critical">
+          <div class="level-top"><span class="level-dot"></span><span class="level-name">Critical</span></div>
+          <p>This looks like a live scam. A mandatory cooldown pauses the payment and breaks the pressure before you can continue.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░░ SCREENS GALLERY (dark) ░░░ -->
+    <section class="screens" id="screens">
+      <div class="section-head center">
+        <div class="section-eyebrow accent">See it in action</div>
+        <h2 class="section-title">A payment app that looks out for you</h2>
+        <p class="section-desc">Familiar on the surface — quietly vigilant underneath.</p>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-tabs" id="galleryTabs">
+          <button class="gtab active" data-target="g-home">Home</button>
+          <button class="gtab" data-target="g-send">Send Money</button>
+          <button class="gtab" data-target="g-risk">Risk Warning</button>
+          <button class="gtab" data-target="g-sms-modal">SMS Analysis</button>
+          <button class="gtab" data-target="g-sms-list">SMS Inbox</button>
+        </div>
+
+        <div class="gallery-stage">
+          <figure class="gslide active" id="g-home">
+            <div class="phone"><img src="assets/screen-home.jpeg" alt="WallUPI home screen showing balance, recent contacts and a suspicious-SMS banner" loading="lazy" /></div>
+            <figcaption>Your balance, contacts and an at-a-glance risk banner — the moment anything looks off, you know.</figcaption>
+          </figure>
+          <figure class="gslide" id="g-send">
+            <div class="phone"><img src="assets/screen-send.jpeg" alt="Send Money screen warning that a suspicious SMS is linked to the recipient" loading="lazy" /></div>
+            <figcaption>Type a recipient and WallUPI instantly surfaces any scam SMS linked to that number.</figcaption>
+          </figure>
+          <figure class="gslide" id="g-risk">
+            <div class="phone"><img src="assets/screen-risk.jpeg" alt="High risk transaction screen with risk factor breakdown" loading="lazy" /></div>
+            <figcaption>When risk is critical, the payment is paused and every reason is laid out clearly.</figcaption>
+          </figure>
+          <figure class="gslide" id="g-sms-modal">
+            <div class="phone"><img src="assets/screen-sms-modal.jpeg" alt="On-device SMS analysis showing fake KYC verification detection" loading="lazy" /></div>
+            <figcaption>On-device analysis breaks down exactly which scam signals a message contains.</figcaption>
+          </figure>
+          <figure class="gslide" id="g-sms-list">
+            <div class="phone"><img src="assets/screen-sms-list.jpeg" alt="SMS inbox scan listing messages with risk scores" loading="lazy" /></div>
+            <figcaption>Your inbox, scanned automatically — safe messages stay quiet, scams get flagged.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ SAFETY / PRIVACY ░░░ -->
+    <section class="safety" id="safety">
+      <div class="safety-inner">
+        <div class="safety-copy reveal">
+          <div class="section-eyebrow accent">Privacy first</div>
+          <h2 class="section-title light">Your data stays yours</h2>
+          <p class="section-desc dark-on-light">Protection shouldn't cost you your privacy. WallUPI does the heavy lifting right on your device.</p>
+          <ul class="safety-list">
+            <li><span class="check">✓</span> Your messages are analyzed <strong>on your phone</strong>, not in the cloud.</li>
+            <li><span class="check">✓</span> Only <strong>sanitized, anonymous</strong> snippets ever leave the device — names, numbers and account details are stripped first.</li>
+            <li><span class="check">✓</span> Your transaction history is <strong>stored locally</strong>.</li>
+            <li><span class="check">✓</span> Flag a UPI ID and the whole community benefits.</li>
+          </ul>
+        </div>
+        <div class="safety-visual reveal" aria-hidden="true">
+          <div class="shield-card">
+            <div class="shield-ico">🛡</div>
+            <div class="shield-rows">
+              <div class="srow"><span>SMS read on-device</span><span class="srow-ok">Private</span></div>
+              <div class="srow"><span>Personal details</span><span class="srow-ok">Stripped</span></div>
+              <div class="srow"><span>History</span><span class="srow-ok">Local only</span></div>
+              <div class="srow"><span>Community reports</span><span class="srow-ok">Shared safely</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ FAQ ░░░ -->
+    <section class="faq" id="faq">
+      <div class="section-head center">
+        <div class="section-eyebrow accent">Good to know</div>
+        <h2 class="section-title">Frequently asked</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Does WallUPI move real money?</summary>
+          <p>No. WallUPI is a demonstration app — no real money moves. But the fraud detection underneath is real, the same logic that would protect you in a live payment.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Does it work without internet?</summary>
+          <p>The first two layers of protection run entirely on your device, with no connection needed. The cloud second opinion only kicks in for borderline cases.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Why does being on a call matter?</summary>
+          <p>It's one of the strongest signs of a live scam. Fraudsters stay on the line and keep talking so you don't have a moment to think — so WallUPI takes it seriously.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What happens at the critical level?</summary>
+          <p>The payment is paused with a mandatory cooldown. That brief, enforced break is designed to defuse the pressure scammers rely on — giving you time to hang up and reconsider.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Who is WallUPI for?</summary>
+          <p>It's a demonstration of what proactive fraud prevention could look like if it were built into payment apps by default — useful for showcases, research and education.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ░░░ CTA BAND ░░░ -->
+    <section class="cta" id="get">
+      <div class="cta-inner">
+        <h2>Secure every payment.<br />Protect every you.</h2>
+        <p>Try WallUPI and feel what it's like to have a guard standing between you and the next scam.</p>
+        <div class="cta-actions">
+          <a href="#top" class="btn btn-light btn-lg">Get the app</a>
+          <a href="#how" class="btn btn-outline-light btn-lg">How it works</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="brand brand-footer" aria-label="WallUPI home">
+          <svg class="brand-mark" viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
+            <path d="M5 7 L13 33 L20 16 L27 33 L35 7" fill="none" stroke="url(#wallGrad)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-word">Wall<span class="brand-upi">UPI</span></span>
+        </a>
+        <p class="footer-tag">Secure every payment. Protect every you.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="fcol">
+          <h4>Product</h4>
+          <a href="#checks">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#screens">Screens</a>
+        </div>
+        <div class="fcol">
+          <h4>Trust</h4>
+          <a href="#safety">Privacy</a>
+          <a href="#faq">FAQ</a>
+          <a href="#levels">Risk levels</a>
+        </div>
+        <div class="fcol">
+          <h4>Company</h4>
+          <a href="#top">A Wall product</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Wall. WallUPI is a demonstration app — no real money moves.</span>
+      <span class="footer-upi">Powered by <span class="upi-chip">UPI</span></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
