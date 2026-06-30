@@ -1,0 +1,6 @@
+# APKs are delivered via GitHub Releases, never committed to the repo
+WallUPI.apk
+app-release.apk
+
+# Source asset bundles
+favicon (1).zip
