@@ -320,17 +320,6 @@ a { color: inherit; text-decoration: none; }
 .survey-inner h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); letter-spacing: -.03em; line-height: 1.1; margin: .5rem 0 .7rem; color: var(--ink); }
 .survey-inner p { color: var(--ink-soft); font-size: 1.1rem; max-width: 520px; margin: 0 auto 1.9rem; }
 
-/* ── CTA ─────────────────────────────────────────────── */
-.cta { padding: 1.5rem; }
-.cta-inner {
-  max-width: var(--maxw); margin: 0 auto;
-  background: var(--blue);
-  border-radius: 28px; padding: clamp(3rem, 6vw, 5rem) 1.5rem; text-align: center; color: #fff;
-}
-.cta-inner h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.05; letter-spacing: -.03em; margin: 0 0 1rem; font-weight: 800; }
-.cta-inner p { font-size: 1.15rem; opacity: .92; max-width: 540px; margin: 0 auto 2rem; }
-.cta-actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
-
 /* ── FOOTER ──────────────────────────────────────────── */
 .footer { background: var(--d-deep); color: var(--on-dark-2); padding: 4rem 1.5rem 2rem; }
 .footer-inner { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1.4fr 2fr; gap: 3rem; }
@@ -378,7 +367,7 @@ a { color: inherit; text-decoration: none; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: .9rem 0; border-bottom: 1px solid var(--l-line); }
   .nav-toggle { display: flex; }
-  .nav-survey { display: none; }
+  .nav-survey, .nav-video { display: none; }
   .flow-arrow { transform: rotate(90deg); }
   .flow-step { width: 100%; max-width: 320px; }
 }
